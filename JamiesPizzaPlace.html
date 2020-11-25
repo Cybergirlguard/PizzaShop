@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Jamie's Pizza Place</title>
+	<script type="text/javascript" src="js/JamiesPizzaPlace.js"></script>
+	<link href="JamiesPizza.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<form method="post" class="login">
+		username: <input type="text" name="Username"/>
+		password: <input type="password" name="Password"/>
+		<input type="submit" value="login"/>
+	</form>
+</body>
+
+<body onload='hideTotal()'>
+    <div id="wrap">
+      <form action="" id="JamiesPizzaPlace" onsubmit="return false;">
+        <div>
+            <div class="container">
+               <fieldset>
+                <legend><h1> Welcome to Jamie's Pizza Place!</h1></legend>
+                <h3>
+                	Today is a good day to order!<br>
+                	Awaiting your delicious selections.
+                </h3>
+                	
+                <label >Sizes Available</label>
+         
+                <select id="Sizes" name='Sizes' onchange="calculateTotal()">
+                <option value="None">Please choose your Pizza Size</option> 
+                <option value="Large">Large (&euro;5.00)</option>
+                <option value="Extra Large">Extra Large(&euro;7)</option>
+                <option value="Supersize">Supersize(&euro;17)</option>
+
+
+                <div id="totalPrice"></div>
+                
+                </fieldset>
+            </div>
+           
+            <input type='submit' id='submit' value='Submit' onclick="calculateTotal()" />
+        </div>  
+      </form>
+	</div><!--End of wrap-->
+
+</body>
+</html>
